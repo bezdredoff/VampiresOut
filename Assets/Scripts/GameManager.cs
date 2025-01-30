@@ -28,6 +28,6 @@ public class GameManager : MonoBehaviour
 
     private void UpdateObjectCounter()
     {
-        objectCounterLabel.text = $"Found: {foundObjects} / {totalObjects}";
+        objectCounterLabel.text = $"{foundObjects}/{totalObjects}";
     }
 }
