@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
         if (foundObjects >= totalObjects)
         {
             Debug.Log("Уровень завершён!");
+            SceneManager.LoadScene(0);
         }
     }
 
