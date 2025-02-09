@@ -10,6 +10,9 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField] public TMP_Text CountLabel;
 
+    [SerializeField] public GameObject UI_Canvas;
+    [SerializeField] public GameObject WinScreen;
+
 
     // Start is called before the first frame update
     void Start()
@@ -32,12 +35,19 @@ public class LevelManager : MonoBehaviour
 
         if (foundItems >= maxItems)
         {
-            SceneManager.LoadScene(0);
+            UI_Canvas.SetActive(false);
+            WinScreen.SetActive(true);
+            
         }
     }
 
     private void UpdateObjectCounter()
     {
-        CountLabel.text = $"{foundItems}/{maxItems}";
+        CountLabel.text = $"{foundItems} / {maxItems}";
+    }
+
+    public void ExitLevel() 
+    {
+        SceneManager.LoadScene(0);
     }
 }
