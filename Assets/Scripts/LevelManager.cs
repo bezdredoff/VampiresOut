@@ -57,4 +57,9 @@ public class LevelManager : MonoBehaviour
         UI_canvas.SetActive(true);
         win_screen.SetActive(false);
     }
+
+    public void LoadLevelByName(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
 }
