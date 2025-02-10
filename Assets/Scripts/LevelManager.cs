@@ -10,16 +10,16 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField] public TMP_Text CountLabel;
 
-    [SerializeField] public GameObject UI_Canvas;
-    [SerializeField] public GameObject WinScreen;
+    [SerializeField] public GameObject UI_canvas;
+    [SerializeField] public GameObject welcome_screen        ;
+    [SerializeField] public GameObject win_screen;
 
 
     // Start is called before the first frame update
     void Start()
     {
+
         UpdateObjectCounter();
-
-
     }
 
     // Update is called once per frame
@@ -35,8 +35,8 @@ public class LevelManager : MonoBehaviour
 
         if (foundItems >= maxItems)
         {
-            UI_Canvas.SetActive(false);
-            WinScreen.SetActive(true);
+            UI_canvas.SetActive(false);
+            win_screen.SetActive(true);
             
         }
     }
@@ -49,5 +49,12 @@ public class LevelManager : MonoBehaviour
     public void ExitLevel() 
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void StartGameUI() 
+    {
+        welcome_screen.SetActive(false);
+        UI_canvas.SetActive(true);
+        win_screen.SetActive(false);
     }
 }

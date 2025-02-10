@@ -727,8 +727,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxItems: 4
   CountLabel: {fileID: 266476259}
-  UI_Canvas: {fileID: 246979376}
-  WinScreen: {fileID: 807120026}
+  UI_canvas: {fileID: 246979376}
+  welcome_screen: {fileID: 0}
+  win_screen: {fileID: 807120026}
 --- !u!1 &775588436
 GameObject:
   m_ObjectHideFlags: 0
